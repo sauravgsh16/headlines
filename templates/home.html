@@ -3,10 +3,18 @@
 		<input type="text" name="publication" placeholder="search">
 		<input type="submit" value="submit">
 	</form>
+    <form>
+        <input type="text" name="city" placeholder="weather search">
+        <input type="submit" value="Submit">
+    </form>
     <head>
         <title>Headlines</title>
     </head>
     <body>
+        <h2>Weather</h2>
+        <p> City : <b> {{ weather.city }} {{ weather.country }} </b></p>
+        <p> Temperature : <b> {{ weather.temperature }} </b></p>
+        <p> Description: <b> {{ weather.description }} </b></p>
     	<h1>Headlines</h1>
     	{% for article in articles %}
         	<b><a href= "{{ article.title }}">{{ article.title }}</a></b><br />
